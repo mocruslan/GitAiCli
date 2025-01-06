@@ -1,5 +1,6 @@
-package dev.mocruc.gitaicli.services;
+package dev.mocruc.gitaicli.core.git.service;
 
+import dev.mocruc.gitaicli.core.git.helper.GitHelper;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.LogCommand;
 import org.eclipse.jgit.api.Status;

@@ -1,19 +1,20 @@
-package dev.mocruc.gitaicli.services;
+package dev.mocruc.gitaicli.core.ai.services;
 
-import dev.mocruc.gitaicli.apis.ChatGPTClient;
-import dev.mocruc.gitaicli.data.Prompt;
-import dev.mocruc.gitaicli.exceptions.ApiException;
+import dev.mocruc.gitaicli.core.apis.OpenAiAPI;
+import dev.mocruc.gitaicli.shared.data.Prompt;
+import dev.mocruc.gitaicli.services.PromptBuilder;
+import dev.mocruc.gitaicli.shared.exceptions.ApiException;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Service
 public class AIService {
-    private final ChatGPTClient chatGPTClient;
+    private final OpenAiAPI openAiAPI;
     private final PromptBuilder promptBuilder;
 
-    public AIService(ChatGPTClient chatGPTClient, PromptBuilder promptBuilder) {
-        this.chatGPTClient = chatGPTClient;
+    public AIService(OpenAiAPI openAiAPI, PromptBuilder promptBuilder) {
+        this.openAiAPI = openAiAPI;
         this.promptBuilder = promptBuilder;
     }
 
@@ -28,7 +29,7 @@ public class AIService {
     }
 
     private String executePrompt(Prompt prompt) throws ApiException {
-        return chatGPTClient.executePrompt(prompt)
+        return openAiAPI.executePrompt(prompt)
                 .orElseThrow(() -> new ApiException("No response received from LLM"));
     }
 }

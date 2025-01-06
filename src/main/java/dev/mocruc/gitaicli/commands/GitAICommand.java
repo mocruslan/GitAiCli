@@ -1,8 +1,8 @@
 package dev.mocruc.gitaicli.commands;
 
-import dev.mocruc.gitaicli.exceptions.ApiException;
-import dev.mocruc.gitaicli.services.AIService;
-import dev.mocruc.gitaicli.services.GitService;
+import dev.mocruc.gitaicli.shared.exceptions.ApiException;
+import dev.mocruc.gitaicli.core.ai.services.AIService;
+import dev.mocruc.gitaicli.core.git.service.GitService;
 import org.springframework.shell.command.annotation.Command;
 import org.springframework.stereotype.Component;
 

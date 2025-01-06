@@ -1,4 +1,4 @@
-package dev.mocruc.gitaicli.data;
+package dev.mocruc.gitaicli.shared.data;
 
 
 import lombok.Builder;

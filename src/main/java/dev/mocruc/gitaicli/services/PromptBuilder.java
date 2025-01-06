@@ -1,6 +1,6 @@
 package dev.mocruc.gitaicli.services;
 
-import dev.mocruc.gitaicli.data.Prompt;
+import dev.mocruc.gitaicli.shared.data.Prompt;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

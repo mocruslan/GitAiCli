@@ -1,4 +1,4 @@
-package dev.mocruc.gitaicli.exceptions;
+package dev.mocruc.gitaicli.shared.exceptions;
 
 public class ApiException extends Exception {
     public ApiException(String message) {

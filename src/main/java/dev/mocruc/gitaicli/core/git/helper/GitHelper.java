@@ -1,4 +1,4 @@
-package dev.mocruc.gitaicli.services;
+package dev.mocruc.gitaicli.core.git.helper;
 
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
