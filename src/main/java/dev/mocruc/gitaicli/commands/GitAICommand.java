@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.util.Map;
 
 @Component
-@Command(command = "git-ai")
+@Command(command = "gitai")
 public class GitAICommand {
     private final GitService gitService;
     private final AIService aiService;
@@ -20,7 +20,7 @@ public class GitAICommand {
         this.aiService = aiService;
     }
 
-    @Command(command = "sum-changes", description = "Summarize recent changes (default last 7 days)")
+    @Command(command = "recent", description = "Summarize recent changes (default last 7 days)")
     public String sumChanges() {
         try {
             String recentCommits = gitService.getRecentCommits(Path.of("."), 10);
@@ -30,7 +30,7 @@ public class GitAICommand {
         }
     }
 
-    @Command(command = "gen-commit-message", description = "Summarize recent changes")
+    @Command(command = "message", description = "Summarize recent changes")
     public String genCommitMessage() {
         try {
             Map<String, String> uncommittedChanges = gitService.getUncommittedChanges();
